@@ -1,0 +1,10 @@
+.question-selector {
+  .answers {
+    display: flex;
+    justify-content: center;
+
+    .first, .second {
+      border: 1px solid red;
+    }
+  }
+}
