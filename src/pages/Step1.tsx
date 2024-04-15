@@ -12,13 +12,6 @@ const Step1 = () => {
 
   return (
     <div className="step-1">
-      <p>{JSON.stringify(questions['s1' as StepKey][question])}</p>
-      <QuestionSelector
-        question={questions['s1'][question]}
-        onSelect={(answer) => {
-          setQuestion(question + 1);
-        }}
-      />
     </div>
   );
 }
