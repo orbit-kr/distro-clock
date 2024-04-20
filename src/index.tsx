@@ -34,6 +34,9 @@ root.render(
   <React.StrictMode>
     <RouterProvider router={router}
     />
+    <footer>
+      Copyright &copy; 2024 Orbit Research Centre. All rights reserved.
+    </footer>
   </React.StrictMode>
 );
 
