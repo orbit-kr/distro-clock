@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# DistroClock
+
+Inspired by [MBTI](https://en.wikipedia.org/wiki/Myers%E2%80%93Briggs_Type_Indicator),
+it will find you to Linux distro which best fits you.
+
+DistroClock is a wordplay for DistroWatch.
+
+## CRA
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
