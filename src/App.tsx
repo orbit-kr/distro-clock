@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import { Question, questions } from '@/constants'
-import Step1 from '@/pages/Step1'
-import QuestionSelector from '@/components/QuestionSelector'
-
-import TestButton from '@/components/TestButton'
 
 function App() {
   const ID_FIRST  = 1;
@@ -43,28 +38,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        {undones.length !== 0 &&
-          <QuestionSelector
-            question={getQuestion(getUndoneRandom())}
-            onSelect={(weight) => {
-              void(weight); // TODO: Do with weight.
-            }}
-          />
-        }
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <TestButton />
+      <div>당신에게 가장 잘 맞는 리눅스 배포판은?</div>
+      <button>시작하기</button>
     </div>
   );
 }
