@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-
+import { AppProvider } from './components/AppContext';
 import { Question, questions } from '@/constants'
 
 function App() {
@@ -37,10 +37,12 @@ function App() {
   }
 
   return (
+  <AppProvider>
     <div className="App">
       <div>당신에게 가장 잘 맞는 리눅스 배포판은?</div>
       <button>시작하기</button>
     </div>
+  </AppProvider>
   );
 }
 

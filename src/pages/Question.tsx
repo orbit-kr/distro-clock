@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 
 import { Question, questions } from '@/constants'
-
+import { useAppContext } from '@/components/AppContext';
 import AnswerGroup from '@/components/AnswerGroup'
 
 const QuestionPage = () => {
-  const currentQuestion: Question = questions[0];
+  const { numbers } = useAppContext();
+  const currentQuestion: Question = questions[numbers[0]-1];
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
 
   return (

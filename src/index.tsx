@@ -7,7 +7,9 @@ import {
 import './index.css';
 
 import App from './App';
+import { AppProvider } from './components/AppContext';
 import QuestionPage from '@/pages/Question'
+import RandomListPage from '@/pages/RandomList'
 import ResultPage from '@/pages/Result'
 
 import reportWebVitals from './reportWebVitals';
@@ -16,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+  },
+  {
+    path: 'random-list',
+    element: <RandomListPage />,
   },
   {
     path: '/question',
@@ -32,8 +38,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}
-    />
+    <AppProvider>
+      <RouterProvider router={router}
+      />
+    </AppProvider>
     <footer>
       Copyright &copy; 2024 Orbit Research Centre. All rights reserved.
     </footer>
