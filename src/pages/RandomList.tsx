@@ -10,11 +10,11 @@ const RandomListPage: React.FC = () => {
     const savedNumbers = localStorage.getItem('randomNumbers');
     const savedAnswers = localStorage.getItem('selectedAnswers');
 
-    alert("savedAnswers" + savedAnswers)
+    // alert("savedAnswers" + savedAnswers)
     
     if (savedNumbers) {
       setNumbers(JSON.parse(savedNumbers));
-      alert("savedNumbers" + savedNumbers)
+      // alert("savedNumbers" + savedNumbers)
     } else {
       // .keys() 대신 Array.from을 사용하여 오류 해결
       const newNumbers = Array.from({length: 20}, (_, index) => index + 1)
