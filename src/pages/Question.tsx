@@ -14,12 +14,17 @@ const QuestionPage = () => {
   useEffect(() => {
     if (numbers.length === 0) {
       navigate('/random-list');
-    }
-    else {
-      setSelectedAnswer(selectedAnswers.length > current ? selectedAnswers[current] : null);
+    } else {
+      const currentSelect = selectedAnswers.length >= current ? selectedAnswers[current] : null;
+      setSelectedAnswer(currentSelect);
     }
   }, [numbers, navigate]);
 
+  useEffect(() => {
+    const currentSelect = selectedAnswers.length > current ? selectedAnswers[current] : null;
+    setSelectedAnswer(currentSelect);
+    //alert("selectedAnswers" + currentSelect);
+  }, [current]);
   // 공통 업데이트 함수
   const updateAnswerAndNavigate = (direction: 'next' | 'prev') => {
 
@@ -29,7 +34,7 @@ const QuestionPage = () => {
     setSelectedAnswers(updatedAnswers);
 
     if (direction === 'next') {
-      if (selectedAnswer === null) {
+      if (selectedAnswer === null || selectedAnswer === '') {
         alert('답을 선택해주세요');
         return;
       } else {
@@ -39,21 +44,20 @@ const QuestionPage = () => {
         navigate('/result/' + numbers.join(','));
       } else {
         setCurrent(current + 1);
-        setSelectedAnswer(null);
       }
     } else if (direction === 'prev') {
       if (current === 0) {
         alert('첫 번째 문제입니다.');
       } else {
-        if (selectedAnswer === null) {
+        if (selectedAnswer === null || selectedAnswer === '') {
           
         } else {
           updatedAnswers[current] = selectedAnswer;
         }
         setCurrent(current - 1);
-        setSelectedAnswer(null);
       }
     }
+
     // const savedAnswers = localStorage.getItem('selectedAnswers');
     // alert("savedAnswers" + savedAnswers)
   };
@@ -63,6 +67,7 @@ const QuestionPage = () => {
   }
 
   const currentQuestion: Question = questions[numbers[current]-1];
+
 
   return (
     <div

@@ -28,7 +28,7 @@ const RandomListPage: React.FC = () => {
     if (savedAnswers) {
       setSelectedAnswers(JSON.parse(savedAnswers));
     } else {
-      setSelectedAnswers(Array.from({length: questionLength}, () => 'none'));      
+      setSelectedAnswers(Array.from({length: questionLength}, () => ''));      
     }
 
 
