@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Question, questions } from '@/constants'
 import { useAppContext } from '@/components/AppContext';
 import AnswerGroup from '@/components/AnswerGroup'
+import { ProgressBar } from '@/components/ProgressBar'
 
 const QuestionPage = () => {
   const navigate = useNavigate();
@@ -67,6 +68,9 @@ const QuestionPage = () => {
     <div
       className="question-page"
     >
+      <ProgressBar
+        progress={(current + 1) / numbers.length * 100}
+      />
       <div>{currentQuestion.question}</div>
       <AnswerGroup
         answerFirst={currentQuestion.answers[0].answer}
