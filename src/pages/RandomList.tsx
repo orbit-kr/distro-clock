@@ -4,17 +4,10 @@ import { useAppContext } from '@/components/AppContext';
 
 const RandomListPage: React.FC = () => {
   const navigate = useNavigate();
-  const { setNumbers, setCurrent } = useAppContext();
+  const { setNumbers } = useAppContext();
 
   useEffect(() => {
     const savedNumbers = localStorage.getItem('randomNumbers');
-    const savedCurrent = localStorage.getItem('current');
-    if (savedCurrent) {
-      setCurrent(parseInt(savedCurrent, 10));
-    } else {
-      localStorage.setItem('current', '0');
-      setCurrent(0);
-    }
 
     if (savedNumbers) {
       setNumbers(JSON.parse(savedNumbers));
