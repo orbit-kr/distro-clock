@@ -9,6 +9,8 @@ interface AppContextType {
   setNumbers: (numbers: number[]) => void;
   current: number;
   setCurrent: (current: number) => void;
+  selectedAnswers: string[];
+  setSelectedAnswers: (selectedAnswers: string[]) => void;
 }
 
 
@@ -22,6 +24,7 @@ export const useAppContext = (): AppContextType => {
 
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [numbers, setNumbers] = useState<number[]>([]);
+  const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
   const [current, setCurrent] = useState<number>(() => {
     // localStorage에서 초기 current 값을 로드합니다.
     const savedCurrent = localStorage.getItem('current');
@@ -33,10 +36,13 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     localStorage.setItem('current', current.toString());
   }, [current]);  // current가 변경될 때만 실행됩니다.
 
-
+  useEffect(() => {
+    // selectedAnswers 상태가 변경될 때마다 localStorage에 저장합니다.
+    localStorage.setItem('selectedAnswers', JSON.stringify(selectedAnswers));
+  }, [selectedAnswers]);  // selectedAnswers가 변경될 때만 실행됩니다.
 
   return (
-    <AppContext.Provider value={{ numbers, setNumbers, current, setCurrent }}>
+    <AppContext.Provider value={{ numbers, setNumbers, current, setCurrent, selectedAnswers, setSelectedAnswers}}>
       {children}
     </AppContext.Provider>
   );
