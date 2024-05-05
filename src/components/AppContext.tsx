@@ -7,7 +7,10 @@ interface User {
 interface AppContextType {
   numbers: number[];
   setNumbers: (numbers: number[]) => void;
+  current: number;
+  setCurrent: (current: number) => void;
 }
+
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
@@ -19,9 +22,10 @@ export const useAppContext = (): AppContextType => {
 
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [numbers, setNumbers] = useState<number[]>([]);
+  const [current, setCurrent] = useState<number>(0);
 
   return (
-    <AppContext.Provider value={{ numbers, setNumbers }}>
+    <AppContext.Provider value={{ numbers, setNumbers, current, setCurrent }}>
       {children}
     </AppContext.Provider>
   );

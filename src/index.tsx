@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: 'random-list',
+    path: '/random-list',
     element: <RandomListPage />,
   },
   {
