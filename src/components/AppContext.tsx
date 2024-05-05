@@ -27,7 +27,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   const [selectedAnswers, setSelectedAnswers] = useState<string[]>(() => {
     // localStorage에서 초기 selectedAnswers 값을 로드합니다.
     const savedAnswers = localStorage.getItem('selectedAnswers');
-    return savedAnswers ? JSON.parse(savedAnswers) : Array.from({length: 20}, () => 'none');
+    return savedAnswers ? JSON.parse(savedAnswers) : [];
   });
   const [current, setCurrent] = useState<number>(() => {
     // localStorage에서 초기 current 값을 로드합니다.
