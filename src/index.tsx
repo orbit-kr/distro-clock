@@ -10,6 +10,7 @@ import App from './App';
 import { AppProvider } from './components/AppContext';
 import QuestionPage from '@/pages/Question'
 import RandomListPage from '@/pages/RandomList'
+import CalcResultPage from '@/pages/CalcResult'
 import ResultPage from '@/pages/Result'
 
 import reportWebVitals from './reportWebVitals';
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: '/question',
     element: <QuestionPage />,
+  },
+  {
+    path: '/calc-result',
+    element: <CalcResultPage />,
   },
   {
     path: '/result/:id',

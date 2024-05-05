@@ -41,7 +41,7 @@ const QuestionPage = () => {
         updatedAnswers[current] = selectedAnswer;
       }
       if (current === numbers.length - 1) {
-        navigate('/result/' + numbers.join(','));
+        navigate('/calc-result');
       } else {
         setCurrent(current + 1);
       }
