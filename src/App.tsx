@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 import './App.css';
 import { AppProvider } from './components/AppContext';
-import { Question, questions } from '@/constants'
+import { Question, questions } from '@/constants';
+
+import "./fonts/Font.css";
 
 function App() {
   const navigate = useNavigate(); // useNavigate 훅을 사용하여 navigate 함수를 가져옵니다.
