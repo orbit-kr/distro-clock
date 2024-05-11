@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 80vh;
 }
 
 .App-logo {
@@ -39,4 +40,37 @@
 
 div {
   font-family: 'seoleimcool'
+}
+
+button {
+  font-family: 'seoleimcool'
+}
+
+.title {
+  font-size: min(2rem, 5vh);
+  margin: 0;
+  margin-bottom: 3vh;
+  margin-top: 10vh;
+  padding: 0;
+}
+
+.title-image-div{
+  text-align: center;
+}
+
+.title-image {
+  height: min(60vh, 80vw);
+  max-height: 500px;
+  margin: auto;
+}
+
+.start-button {
+  font-size: min(1.5rem, 2.5vh);
+  margin: 4vh;
+  width: min(58vh, 78vw);
+  max-width: 480px;
+  height: 9vh;
+  border-radius: 1vh;
+  background-color: #FFB596;
+  border:none;
 }
