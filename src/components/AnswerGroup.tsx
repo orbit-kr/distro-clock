@@ -22,7 +22,7 @@ const AnswerGroup = (props: AnswerGroupProps) => {
           props.onSelect('first');
         }}
         style={{
-          backgroundColor: props.selected === 'first' ? 'red' : 'initial',
+          backgroundColor: props.selected === 'first' ? '#89C9F4' : '#89E5DD',
         }}
       >{props.answerFirst}</button>
       <button
@@ -35,7 +35,7 @@ const AnswerGroup = (props: AnswerGroupProps) => {
           props.onSelect('second');
         }}
         style={{
-          backgroundColor: props.selected === 'second' ? 'red' : 'initial',
+          backgroundColor: props.selected === 'second' ? '#89C9F4' : '#89E5DD',
         }}
       >{props.answerSecond}</button>
     </div>

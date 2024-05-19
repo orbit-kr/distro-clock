@@ -6,6 +6,8 @@ import { useAppContext } from '@/components/AppContext';
 import AnswerGroup from '@/components/AnswerGroup'
 import { ProgressBar } from '@/components/ProgressBar'
 
+import './Question.scss'
+
 const QuestionPage = () => {
   const navigate = useNavigate();
   const { numbers, current, setCurrent, selectedAnswers, setSelectedAnswers } = useAppContext();
@@ -73,21 +75,25 @@ const QuestionPage = () => {
     <div
       className="question-page"
     >
-      <ProgressBar
-        progress={(current + 1) / numbers.length * 100}
-      />
-      <div>{currentQuestion.question}</div>
-      <AnswerGroup
-        answerFirst={currentQuestion.answers[0].answer}
-        answerSecond={currentQuestion.answers[1].answer}
-        selected={selectedAnswer}
-        onSelect={(value) => {
-          setSelectedAnswer(value);
-        }}
-      />
-      <div className="button-group">
-        <button onClick={() => updateAnswerAndNavigate('prev')}>이전</button>
-        <button onClick={() => updateAnswerAndNavigate('next')}>다음</button>
+      <div className="question-div">
+        <ProgressBar
+          progress={parseInt(((current + 1) / numbers.length * 100).toFixed())}
+        />
+        <div className="qustion-desc">
+          {currentQuestion.question}
+        </div>
+        <AnswerGroup
+          answerFirst={currentQuestion.answers[0].answer}
+          answerSecond={currentQuestion.answers[1].answer}
+          selected={selectedAnswer}
+          onSelect={(value) => {
+            setSelectedAnswer(value);
+          }}
+        />
+        <div className="button-group">
+          <button onClick={() => updateAnswerAndNavigate('prev')}>이전으로</button>
+          <button onClick={() => updateAnswerAndNavigate('next')}>다음으로</button>
+        </div>
       </div>
     </div>
   );
