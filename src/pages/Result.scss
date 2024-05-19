@@ -1,0 +1,93 @@
+.result-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-div{
+  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.result-image-div {
+  width: 250px;
+  height: 250px;
+  border-radius: 40px;
+  background: #ffffff;
+  box-shadow: inset 6px 6px 19px #a6a6a6,
+              inset -6px -6px 19px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.result-image {
+  width: 80%;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-desc-div {
+  width: 280px;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  padding: 20px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.result-bottom-div {
+  width: 330px;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.friends-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.friends-image-div {
+  width: 50%;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: inset 6px 6px 19px #a6a6a6,
+              inset -6px -6px 19px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+  
+.friends-image {
+  width: 80%;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-button {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: min(1.5rem, 2.5vh);
+  height: 9vh;
+  border-radius: 1vh;
+  background-color: #FFB596;
+  border:none;
+}
