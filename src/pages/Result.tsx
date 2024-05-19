@@ -5,6 +5,10 @@ import { useParams } from 'react-router-dom'
 import { Result, results } from '@/constants'
 import { useAppContext } from '@/components/AppContext';
 
+import {
+  TwitterShareButton,
+  TwitterIcon,
+} from "react-share";
 
 const ResultPage = () => {
   const params = useParams();
@@ -51,7 +55,17 @@ const ResultPage = () => {
             </div>
           </div>
         </div>
-        <button className='bottom-button' onClick={clearLocalStorage}>다시하기</button>
+        <div className="bottom">
+          <button className='bottom-button' onClick={clearLocalStorage}>
+            다시하기
+          </button>
+          <TwitterShareButton 
+            url={window.location.href}
+            title={"[당신에게 맞는 배포판 찾기]\n\n"+result.name+"\n\n"+result.desc}
+            className="bottom-button">
+            <TwitterIcon size={32} round={true} /> 트위터 공유
+          </TwitterShareButton>
+        </div>
       </div>
 
     </div>
