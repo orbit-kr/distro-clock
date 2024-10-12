@@ -51,7 +51,12 @@ const ResultPage = () => {
             >
               <img
                 className="friends-image"
-                src={process.env.PUBLIC_URL + "/img/" + result.best + ".jpg"}
+                src={
+                  process.env.PUBLIC_URL +
+                  "/img/" +
+                  result.best.toLowerCase() +
+                  ".jpg"
+                }
                 alt="logo"
               />
             </div>
@@ -65,7 +70,12 @@ const ResultPage = () => {
             >
               <img
                 className="friends-image"
-                src={process.env.PUBLIC_URL + "/img/" + result.worst + ".jpg"}
+                src={
+                  process.env.PUBLIC_URL +
+                  "/img/" +
+                  result.worst.toLowerCase() +
+                  ".jpg"
+                }
                 alt="logo"
               />
             </div>
