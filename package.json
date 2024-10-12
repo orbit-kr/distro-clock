@@ -25,7 +25,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "shx cp build/index.html build/404.html && gh-pages -b master -d build",
+    "deploy": "shx cp build/index.html build/404.html && gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "react-scripts test",
