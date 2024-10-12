@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   height: 80vh;
+  width: 100vw;
 }
 
 .App-logo {
@@ -39,11 +40,12 @@
 }
 
 div {
-  font-family: 'seoleimcool'
+  font-family: "seoleimcool";
 }
 
 button {
-  font-family: 'seoleimcool'
+  font-family: "seoleimcool";
+  color: black;
 }
 
 .title {
@@ -54,7 +56,7 @@ button {
   padding: 0;
 }
 
-.title-image-div{
+.title-image-div {
   text-align: center;
 }
 
@@ -71,6 +73,6 @@ button {
   max-width: 480px;
   height: 9vh;
   border-radius: 1vh;
-  background-color: #FFB596;
-  border:none;
+  background-color: #ffb596;
+  border: none;
 }
