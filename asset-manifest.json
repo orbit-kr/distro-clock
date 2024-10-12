@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/distro-clock/static/css/main.d6ba8270.css",
+    "main.js": "/distro-clock/static/js/main.f55b1e3a.js",
+    "static/js/453.85a5a724.chunk.js": "/distro-clock/static/js/453.85a5a724.chunk.js",
+    "static/media/SEOLEIMcool.woff": "/distro-clock/static/media/SEOLEIMcool.21134243f1bf52be272b.woff",
+    "index.html": "/distro-clock/index.html",
+    "main.d6ba8270.css.map": "/distro-clock/static/css/main.d6ba8270.css.map",
+    "main.f55b1e3a.js.map": "/distro-clock/static/js/main.f55b1e3a.js.map",
+    "453.85a5a724.chunk.js.map": "/distro-clock/static/js/453.85a5a724.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6ba8270.css",
+    "static/js/main.f55b1e3a.js"
+  ]
+}
