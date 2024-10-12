@@ -18,13 +18,14 @@
     "react-scripts": "5.0.1",
     "react-share": "^5.1.0",
     "sass": "^1.75.0",
+    "shx": "^0.3.4",
     "styled-components": "^6.1.9",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "shx cp build/index.html build/404.html && gh-pages -b master -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "react-scripts test",

@@ -1,0 +1,61 @@
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.not-found-div {
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow:
+    6px 6px 19px #a6a6a6,
+    -6px -6px 19px #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.not-found-message {
+  margin-bottom: 20px;
+}
+
+.not-found-message h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.not-found-message p {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.not-found-bottom-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-button {
+  width: 160px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #ffb596;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bottom-button:hover {
+  background-color: #ff9a7b;
+}
