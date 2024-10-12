@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/distro-clock/static/css/main.61cc5a5e.css",
+    "main.css": "/distro-clock/static/css/main.cb21fc4d.css",
     "main.js": "/distro-clock/static/js/main.536cd7dc.js",
     "static/js/453.85a5a724.chunk.js": "/distro-clock/static/js/453.85a5a724.chunk.js",
     "static/media/SEOLEIMcool.woff": "/distro-clock/static/media/SEOLEIMcool.21134243f1bf52be272b.woff",
     "index.html": "/distro-clock/index.html",
-    "main.61cc5a5e.css.map": "/distro-clock/static/css/main.61cc5a5e.css.map",
+    "main.cb21fc4d.css.map": "/distro-clock/static/css/main.cb21fc4d.css.map",
     "main.536cd7dc.js.map": "/distro-clock/static/js/main.536cd7dc.js.map",
     "453.85a5a724.chunk.js.map": "/distro-clock/static/js/453.85a5a724.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61cc5a5e.css",
+    "static/css/main.cb21fc4d.css",
     "static/js/main.536cd7dc.js"
   ]
 }
